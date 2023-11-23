@@ -10,7 +10,7 @@
 		8D0CC0462B0BCADD0009E488 /* PokedexCombineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0CC0452B0BCADD0009E488 /* PokedexCombineApp.swift */; };
 		8D0CC0482B0BCADD0009E488 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0CC0472B0BCADD0009E488 /* Persistence.swift */; };
 		8D0CC04B2B0BCADD0009E488 /* PokedexCombine.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8D0CC0492B0BCADD0009E488 /* PokedexCombine.xcdatamodeld */; };
-		8D0CC04D2B0BCADD0009E488 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0CC04C2B0BCADD0009E488 /* ContentView.swift */; };
+		8D0CC04D2B0BCADD0009E488 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0CC04C2B0BCADD0009E488 /* RootView.swift */; };
 		8D0CC04F2B0BCADF0009E488 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D0CC04E2B0BCADF0009E488 /* Assets.xcassets */; };
 		8D0CC0532B0BCADF0009E488 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D0CC0522B0BCADF0009E488 /* Preview Assets.xcassets */; };
 		8D0CC05D2B0BCADF0009E488 /* PokedexCombineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0CC05C2B0BCADF0009E488 /* PokedexCombineTests.swift */; };
@@ -40,7 +40,7 @@
 		8D0CC0452B0BCADD0009E488 /* PokedexCombineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexCombineApp.swift; sourceTree = "<group>"; };
 		8D0CC0472B0BCADD0009E488 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		8D0CC04A2B0BCADD0009E488 /* PokedexCombine.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PokedexCombine.xcdatamodel; sourceTree = "<group>"; };
-		8D0CC04C2B0BCADD0009E488 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8D0CC04C2B0BCADD0009E488 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		8D0CC04E2B0BCADF0009E488 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D0CC0502B0BCADF0009E488 /* PokedexCombine.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PokedexCombine.entitlements; sourceTree = "<group>"; };
 		8D0CC0522B0BCADF0009E488 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -99,10 +99,11 @@
 		8D0CC0442B0BCADD0009E488 /* PokedexCombine */ = {
 			isa = PBXGroup;
 			children = (
+				8DFB25C12B0FDE89005E125B /* Domain */,
+				8DFB25C02B0FDE3F005E125B /* Data */,
 				8D0CC0752B0BCC330009E488 /* Presentation */,
 				8D0CC0452B0BCADD0009E488 /* PokedexCombineApp.swift */,
 				8D0CC0472B0BCADD0009E488 /* Persistence.swift */,
-				8D0CC04C2B0BCADD0009E488 /* ContentView.swift */,
 				8D0CC04E2B0BCADF0009E488 /* Assets.xcassets */,
 				8D0CC0502B0BCADF0009E488 /* PokedexCombine.entitlements */,
 				8D0CC0492B0BCADD0009E488 /* PokedexCombine.xcdatamodeld */,
@@ -139,8 +140,87 @@
 		8D0CC0752B0BCC330009E488 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				8DFB25C92B0FE5FD005E125B /* ViewModels */,
+				8DFB25C82B0FE5F5005E125B /* Views */,
+				8D0CC04C2B0BCADD0009E488 /* RootView.swift */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		8DFB25C02B0FDE3F005E125B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				8DFB25C32B0FE418005E125B /* Repository */,
+				8DFB25C22B0FE412005E125B /* Network */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		8DFB25C12B0FDE89005E125B /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				8DFB25C72B0FE5BF005E125B /* UseCases */,
+				8DFB25C62B0FE5B6005E125B /* Protocols */,
+				8DFB25C52B0FE5A9005E125B /* Models */,
+				8DFB25C42B0FE508005E125B /* Extensions */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		8DFB25C22B0FE412005E125B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		8DFB25C32B0FE418005E125B /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		8DFB25C42B0FE508005E125B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8DFB25C52B0FE5A9005E125B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8DFB25C62B0FE5B6005E125B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		8DFB25C72B0FE5BF005E125B /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		8DFB25C82B0FE5F5005E125B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8DFB25C92B0FE5FD005E125B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,7 +355,7 @@
 			files = (
 				8D0CC0462B0BCADD0009E488 /* PokedexCombineApp.swift in Sources */,
 				8D0CC04B2B0BCADD0009E488 /* PokedexCombine.xcdatamodeld in Sources */,
-				8D0CC04D2B0BCADD0009E488 /* ContentView.swift in Sources */,
+				8D0CC04D2B0BCADD0009E488 /* RootView.swift in Sources */,
 				8D0CC0482B0BCADD0009E488 /* Persistence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
