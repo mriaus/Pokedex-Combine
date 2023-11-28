@@ -13,7 +13,7 @@ struct PokedexCombineApp: App {
 
     var body: some Scene {
         WindowGroup {
-            RootView()
+            PokemonListView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
