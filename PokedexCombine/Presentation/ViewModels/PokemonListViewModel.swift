@@ -17,10 +17,10 @@ final class PokemonListViewModel: ObservableObject {
     
     init(useCase: UseCasePokemonListProtocol) {
         print("Entra en el init")
-
-            self.useCase = useCase
+        
+        self.useCase = useCase
         self.getPokemons()
-        }
+    }
     
     func getPokemons() {
         let offset = pokemons.count + 1
@@ -31,25 +31,27 @@ final class PokemonListViewModel: ObservableObject {
                     //TODO: Check if errors
                     print("completion GETPOKEMONS \(completion)")
                 } receiveValue: { [weak self] pokemonDTO in
-                    print("Dentro del receiveValue \(pokemonDTO)")
-                    pokemonDTO.results.map { result in
-                        print(result)
-                    
-                    }
+                    pokemonDTO.results?.forEach({ pokemon in
+                        if let pokemonName = pokemon.name {
+                            self?.getPokemonByName(pokemonName: pokemonName)
+                        }
+                    })
                 }
                 .store(in: &suscriptors)
-
         }
     }
     
-    func getPokemonById(pokemonId: Int) {
-         useCase.loadPokemon(pokemonId: pokemonId)
+    func getPokemonByName(pokemonName: String) {
+        useCase.loadPokemon(pokemonName: pokemonName)
             .sink { completion in
                 //TODO
-            } receiveValue: { pokemonDTO in
-                print("GET POKEMON BY ID RESULT \(pokemonDTO)")
+                print("Completion de getPokemonByName \(completion)")
+            } receiveValue: {[weak self] pokemonDTO in
+                let pokemonToAppend = Pokemon(id: pokemonDTO.id, name: pokemonDTO.name, description: "No description", number: pokemonDTO.id, urlImage: pokemonDTO.sprites?.frontDefault)
+                self?.pokemons.append(pokemonToAppend)
             }
-
+            .store(in: &suscriptors)
+        
     }
     
 }

@@ -12,7 +12,12 @@ struct PokemonListView: View {
     @ObservedObject var viewModel = PokemonListViewModel(useCase: UseCasePokemonList())
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            ForEach(viewModel.pokemons, id: \.id) { pokemon in
+                       Text(pokemon.name ?? "Unknown")
+                   }
+        }
+       
     }
 }
 

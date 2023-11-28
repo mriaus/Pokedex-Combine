@@ -38,7 +38,7 @@ struct PokemonsService: PokemonsServiceProtocol {
     }
     
     func getPokemonByName(pokemonName: String) -> AnyPublisher<PokemonDetailResponse, Error> {
-        let urlPokemon = "\(server)\(endpoints.pokemons.rawValue)\(pokemonName)"
+        let urlPokemon = "\(server)\(endpoints.pokemons.rawValue)/\(pokemonName)"
         
         var request: URLRequest = URLRequest(url: URL(string: urlPokemon)!)
                 request.httpMethod = HTTPMethods.get
