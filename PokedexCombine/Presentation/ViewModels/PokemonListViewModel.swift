@@ -16,14 +16,12 @@ final class PokemonListViewModel: ObservableObject {
     var suscriptors = Set<AnyCancellable>()
     
     init(useCase: UseCasePokemonListProtocol) {
-        print("Entra en el init")
-        
         self.useCase = useCase
         self.getPokemons()
     }
     
     func getPokemons() {
-        let offset = pokemons.count + 1
+        let offset = pokemons.count == 0 ? 0 : pokemons.count + 1
         if(totalPokemons < pokemons.count || totalPokemons == 0){
             print("Entra en el if")
             useCase.loadPokemons(offset: String(offset))

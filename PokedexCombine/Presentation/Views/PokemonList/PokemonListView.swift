@@ -12,10 +12,14 @@ struct PokemonListView: View {
     @ObservedObject var viewModel = PokemonListViewModel(useCase: UseCasePokemonList())
     
     var body: some View {
-        VStack{
-            ForEach(viewModel.pokemons, id: \.id) { pokemon in
-                       Text(pokemon.name ?? "Unknown")
-                   }
+        ScrollView{
+            LazyVGrid(columns: [GridItem(),GridItem()], content: {
+                ForEach(viewModel.pokemons.sorted(by: { $0.number! < $1.number! }), id: \.id) { pokemon in
+                          PokemonListCellView(pokemon: pokemon)
+                       }
+            })
+            
+           
         }
        
     }

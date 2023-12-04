@@ -1,5 +1,5 @@
 //
-//  Constants.swift
+//  PokemonTypes.swift
 //  PokedexCombine
 //
 //  Created by Marcos on 4/12/23.

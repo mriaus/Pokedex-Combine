@@ -159,41 +159,27 @@ struct Versions: Codable {
 // MARK: - Sprites
 class Sprites: Codable {
     let backDefault: String?
-    let backFemale: JSONNullPokemonDetail?
+    let backFemale: String?
     let backShiny: String?
-    let backShinyFemale: JSONNullPokemonDetail?
+    let backShinyFemale: String?
     let frontDefault: String?
-    let frontFemale: JSONNullPokemonDetail?
+    let frontFemale: String?
     let frontShiny: String?
-    let frontShinyFemale: JSONNullPokemonDetail?
+    let frontShinyFemale: String?
     let other: Other?
     let versions: Versions?
     let animated: Sprites?
 
     enum CodingKeys: String, CodingKey {
-        case backDefault
-        case backFemale
-        case backShiny
-        case backShinyFemale
-        case frontDefault
-        case frontFemale
-        case frontShiny
-        case frontShinyFemale
+        case backDefault = "back_default"
+        case backFemale = "back_female"
+        case backShiny = "back_shiny"
+        case backShinyFemale = "back_shiny_female"
+        case frontDefault = "front_default"
+        case frontFemale = "front_female"
+        case frontShiny = "front_shiny"
+        case frontShinyFemale = "front_shiny_female"
         case other, versions, animated
-    }
-
-    init(backDefault: String?, backFemale: JSONNullPokemonDetail?, backShiny: String?, backShinyFemale: JSONNullPokemonDetail?, frontDefault: String?, frontFemale: JSONNullPokemonDetail?, frontShiny: String?, frontShinyFemale: JSONNullPokemonDetail?, other: Other?, versions: Versions?, animated: Sprites?) {
-        self.backDefault = backDefault
-        self.backFemale = backFemale
-        self.backShiny = backShiny
-        self.backShinyFemale = backShinyFemale
-        self.frontDefault = frontDefault
-        self.frontFemale = frontFemale
-        self.frontShiny = frontShiny
-        self.frontShinyFemale = frontShinyFemale
-        self.other = other
-        self.versions = versions
-        self.animated = animated
     }
 }
 
