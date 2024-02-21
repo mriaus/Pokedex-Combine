@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D0387E22B851BD200EA1F05 /* PokemonListFirebaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0387E12B851BD200EA1F05 /* PokemonListFirebaseResponse.swift */; };
+		8D0387E42B851E0100EA1F05 /* Extension+URLResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0387E32B851E0100EA1F05 /* Extension+URLResponse.swift */; };
+		8D0387E62B851E8200EA1F05 /* PokemonsFirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0387E52B851E8200EA1F05 /* PokemonsFirebaseService.swift */; };
 		8D0B81E62B1E5D12005E669D /* PokemonListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0B81E52B1E5D12005E669D /* PokemonListCellView.swift */; };
 		8D0B81E92B1E6934005E669D /* PokemonTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0B81E82B1E6934005E669D /* PokemonTypes.swift */; };
 		8D0CC0462B0BCADD0009E488 /* PokedexCombineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0CC0452B0BCADD0009E488 /* PokedexCombineApp.swift */; };
@@ -17,6 +20,19 @@
 		8D0CC05D2B0BCADF0009E488 /* PokedexCombineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0CC05C2B0BCADF0009E488 /* PokedexCombineTests.swift */; };
 		8D0CC0672B0BCADF0009E488 /* PokedexCombineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0CC0662B0BCADF0009E488 /* PokedexCombineUITests.swift */; };
 		8D0CC0692B0BCADF0009E488 /* PokedexCombineUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0CC0682B0BCADF0009E488 /* PokedexCombineUITestsLaunchTests.swift */; };
+		8D9ACC242B84AE2200EB546E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D9ACC232B84AE2200EB546E /* GoogleService-Info.plist */; };
+		8D9ACC272B84AEA500EB546E /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 8D9ACC262B84AEA500EB546E /* FirebaseAnalytics */; };
+		8D9ACC292B84AEA500EB546E /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8D9ACC282B84AEA500EB546E /* FirebaseAnalyticsSwift */; };
+		8D9ACC2B2B84AEA500EB546E /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 8D9ACC2A2B84AEA500EB546E /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		8D9ACC2D2B84AEA500EB546E /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 8D9ACC2C2B84AEA500EB546E /* FirebaseAppCheck */; };
+		8D9ACC2F2B84AEA500EB546E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 8D9ACC2E2B84AEA500EB546E /* FirebaseAuth */; };
+		8D9ACC312B84AEA500EB546E /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 8D9ACC302B84AEA500EB546E /* FirebaseAuthCombine-Community */; };
+		8D9ACC332B84AEA500EB546E /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 8D9ACC322B84AEA500EB546E /* FirebaseCrashlytics */; };
+		8D9ACC352B84AEA500EB546E /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8D9ACC342B84AEA500EB546E /* FirebaseDatabaseSwift */; };
+		8D9ACC372B84AEA500EB546E /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 8D9ACC362B84AEA500EB546E /* FirebaseFirestoreCombine-Community */; };
+		8D9ACC392B84AEA500EB546E /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8D9ACC382B84AEA500EB546E /* FirebaseFirestoreSwift */; };
+		8D9ACC3B2B84AEA500EB546E /* FirebaseInAppMessagingSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 8D9ACC3A2B84AEA500EB546E /* FirebaseInAppMessagingSwift-Beta */; };
+		8D9ACC3D2B84AEA500EB546E /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 8D9ACC3C2B84AEA500EB546E /* FirebaseStorageCombine-Community */; };
 		8DFB25CD2B14AC79005E125B /* PokemonsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFB25CC2B14AC79005E125B /* PokemonsService.swift */; };
 		8DFB25CF2B14ACEB005E125B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFB25CE2B14ACEB005E125B /* Constants.swift */; };
 		8DFB25D12B14B38F005E125B /* PokemonListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFB25D02B14B38F005E125B /* PokemonListResponse.swift */; };
@@ -46,6 +62,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D0387E12B851BD200EA1F05 /* PokemonListFirebaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonListFirebaseResponse.swift; sourceTree = "<group>"; };
+		8D0387E32B851E0100EA1F05 /* Extension+URLResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Extension+URLResponse.swift"; path = "PokedexCombine/Data/Network/Models/Extension+URLResponse.swift"; sourceTree = SOURCE_ROOT; };
+		8D0387E52B851E8200EA1F05 /* PokemonsFirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonsFirebaseService.swift; sourceTree = "<group>"; };
 		8D0B81E52B1E5D12005E669D /* PokemonListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonListCellView.swift; sourceTree = "<group>"; };
 		8D0B81E82B1E6934005E669D /* PokemonTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTypes.swift; sourceTree = "<group>"; };
 		8D0CC0422B0BCADD0009E488 /* PokedexCombine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokedexCombine.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,6 +79,7 @@
 		8D0CC0622B0BCADF0009E488 /* PokedexCombineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokedexCombineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D0CC0662B0BCADF0009E488 /* PokedexCombineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexCombineUITests.swift; sourceTree = "<group>"; };
 		8D0CC0682B0BCADF0009E488 /* PokedexCombineUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexCombineUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8D9ACC232B84AE2200EB546E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8DFB25CC2B14AC79005E125B /* PokemonsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonsService.swift; sourceTree = "<group>"; };
 		8DFB25CE2B14ACEB005E125B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8DFB25D02B14B38F005E125B /* PokemonListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonListResponse.swift; sourceTree = "<group>"; };
@@ -76,6 +96,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D9ACC3B2B84AEA500EB546E /* FirebaseInAppMessagingSwift-Beta in Frameworks */,
+				8D9ACC352B84AEA500EB546E /* FirebaseDatabaseSwift in Frameworks */,
+				8D9ACC2D2B84AEA500EB546E /* FirebaseAppCheck in Frameworks */,
+				8D9ACC312B84AEA500EB546E /* FirebaseAuthCombine-Community in Frameworks */,
+				8D9ACC372B84AEA500EB546E /* FirebaseFirestoreCombine-Community in Frameworks */,
+				8D9ACC2F2B84AEA500EB546E /* FirebaseAuth in Frameworks */,
+				8D9ACC392B84AEA500EB546E /* FirebaseFirestoreSwift in Frameworks */,
+				8D9ACC332B84AEA500EB546E /* FirebaseCrashlytics in Frameworks */,
+				8D9ACC292B84AEA500EB546E /* FirebaseAnalyticsSwift in Frameworks */,
+				8D9ACC2B2B84AEA500EB546E /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				8D9ACC3D2B84AEA500EB546E /* FirebaseStorageCombine-Community in Frameworks */,
+				8D9ACC272B84AEA500EB546E /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +167,7 @@
 				8D0CC04E2B0BCADF0009E488 /* Assets.xcassets */,
 				8D0CC0502B0BCADF0009E488 /* PokedexCombine.entitlements */,
 				8D0CC0492B0BCADD0009E488 /* PokedexCombine.xcdatamodeld */,
+				8D9ACC232B84AE2200EB546E /* GoogleService-Info.plist */,
 				8D0CC0512B0BCADF0009E488 /* Preview Content */,
 			);
 			path = PokedexCombine;
@@ -214,6 +247,7 @@
 		8DFB25C42B0FE508005E125B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				8D0387E32B851E0100EA1F05 /* Extension+URLResponse.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -263,6 +297,7 @@
 			children = (
 				8DFB25D02B14B38F005E125B /* PokemonListResponse.swift */,
 				8DFB25D22B14B501005E125B /* PokemonDetailResponse.swift */,
+				8D0387E12B851BD200EA1F05 /* PokemonListFirebaseResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -272,6 +307,7 @@
 			children = (
 				8DFB25CC2B14AC79005E125B /* PokemonsService.swift */,
 				8DFB25CE2B14ACEB005E125B /* Constants.swift */,
+				8D0387E52B851E8200EA1F05 /* PokemonsFirebaseService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -301,6 +337,20 @@
 			dependencies = (
 			);
 			name = PokedexCombine;
+			packageProductDependencies = (
+				8D9ACC262B84AEA500EB546E /* FirebaseAnalytics */,
+				8D9ACC282B84AEA500EB546E /* FirebaseAnalyticsSwift */,
+				8D9ACC2A2B84AEA500EB546E /* FirebaseAnalyticsWithoutAdIdSupport */,
+				8D9ACC2C2B84AEA500EB546E /* FirebaseAppCheck */,
+				8D9ACC2E2B84AEA500EB546E /* FirebaseAuth */,
+				8D9ACC302B84AEA500EB546E /* FirebaseAuthCombine-Community */,
+				8D9ACC322B84AEA500EB546E /* FirebaseCrashlytics */,
+				8D9ACC342B84AEA500EB546E /* FirebaseDatabaseSwift */,
+				8D9ACC362B84AEA500EB546E /* FirebaseFirestoreCombine-Community */,
+				8D9ACC382B84AEA500EB546E /* FirebaseFirestoreSwift */,
+				8D9ACC3A2B84AEA500EB546E /* FirebaseInAppMessagingSwift-Beta */,
+				8D9ACC3C2B84AEA500EB546E /* FirebaseStorageCombine-Community */,
+			);
 			productName = PokedexCombine;
 			productReference = 8D0CC0422B0BCADD0009E488 /* PokedexCombine.app */;
 			productType = "com.apple.product-type.application";
@@ -373,6 +423,9 @@
 				Base,
 			);
 			mainGroup = 8D0CC0392B0BCADD0009E488;
+			packageReferences = (
+				8D9ACC252B84AEA500EB546E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 8D0CC0432B0BCADD0009E488 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -391,6 +444,7 @@
 			files = (
 				8D0CC0532B0BCADF0009E488 /* Preview Assets.xcassets in Resources */,
 				8D0CC04F2B0BCADF0009E488 /* Assets.xcassets in Resources */,
+				8D9ACC242B84AE2200EB546E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,14 +469,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D0387E42B851E0100EA1F05 /* Extension+URLResponse.swift in Sources */,
 				8DFB25D72B150D74005E125B /* UseCasePokemonList.swift in Sources */,
 				8D0CC0462B0BCADD0009E488 /* PokedexCombineApp.swift in Sources */,
 				8DFB25E12B165505005E125B /* PokemonListView.swift in Sources */,
+				8D0387E62B851E8200EA1F05 /* PokemonsFirebaseService.swift in Sources */,
 				8DFB25D32B14B501005E125B /* PokemonDetailResponse.swift in Sources */,
 				8D0B81E62B1E5D12005E669D /* PokemonListCellView.swift in Sources */,
 				8DFB25D92B150EAC005E125B /* UseCasePokemonListProtocol.swift in Sources */,
 				8DFB25DF2B1514C0005E125B /* PokemonListViewModel.swift in Sources */,
 				8D0CC04B2B0BCADD0009E488 /* PokedexCombine.xcdatamodeld in Sources */,
+				8D0387E22B851BD200EA1F05 /* PokemonListFirebaseResponse.swift in Sources */,
 				8D0CC0482B0BCADD0009E488 /* Persistence.swift in Sources */,
 				8DFB25D52B14B788005E125B /* Pokemon.swift in Sources */,
 				8DFB25D12B14B38F005E125B /* PokemonListResponse.swift in Sources */,
@@ -785,6 +842,80 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8D9ACC252B84AEA500EB546E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.21.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8D9ACC262B84AEA500EB546E /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8D9ACC252B84AEA500EB546E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		8D9ACC282B84AEA500EB546E /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8D9ACC252B84AEA500EB546E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		8D9ACC2A2B84AEA500EB546E /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8D9ACC252B84AEA500EB546E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+		8D9ACC2C2B84AEA500EB546E /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8D9ACC252B84AEA500EB546E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
+		8D9ACC2E2B84AEA500EB546E /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8D9ACC252B84AEA500EB546E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		8D9ACC302B84AEA500EB546E /* FirebaseAuthCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8D9ACC252B84AEA500EB546E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAuthCombine-Community";
+		};
+		8D9ACC322B84AEA500EB546E /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8D9ACC252B84AEA500EB546E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		8D9ACC342B84AEA500EB546E /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8D9ACC252B84AEA500EB546E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
+		};
+		8D9ACC362B84AEA500EB546E /* FirebaseFirestoreCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8D9ACC252B84AEA500EB546E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreCombine-Community";
+		};
+		8D9ACC382B84AEA500EB546E /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8D9ACC252B84AEA500EB546E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		8D9ACC3A2B84AEA500EB546E /* FirebaseInAppMessagingSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8D9ACC252B84AEA500EB546E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseInAppMessagingSwift-Beta";
+		};
+		8D9ACC3C2B84AEA500EB546E /* FirebaseStorageCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8D9ACC252B84AEA500EB546E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseStorageCombine-Community";
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		8D0CC0492B0BCADD0009E488 /* PokedexCombine.xcdatamodeld */ = {

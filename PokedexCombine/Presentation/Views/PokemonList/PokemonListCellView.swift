@@ -55,5 +55,5 @@ struct PokemonListCellView: View {
 }
 
 #Preview {
-    PokemonListCellView(pokemon: Pokemon(id: 3, name: "Venusaur", description: "", number: 0001, urlImage: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png"))
+    PokemonListCellView(pokemon: Pokemon(id: "3", name: "Venusaur", description: "", number: 0001, urlImage: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png"))
 }

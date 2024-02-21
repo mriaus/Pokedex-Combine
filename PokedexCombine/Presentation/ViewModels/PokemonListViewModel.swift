@@ -17,7 +17,8 @@ final class PokemonListViewModel: ObservableObject {
     
     init(useCase: UseCasePokemonListProtocol) {
         self.useCase = useCase
-        self.getPokemons()
+        //self.getPokemons()
+        self.getPokemonsFirebase()
     }
     
     func getPokemons() {
@@ -45,11 +46,22 @@ final class PokemonListViewModel: ObservableObject {
                 //TODO
                 print("Completion de getPokemonByName \(completion)")
             } receiveValue: {[weak self] pokemonDTO in
-                let pokemonToAppend = Pokemon(id: pokemonDTO.id, name: pokemonDTO.name, description: "No description", number: pokemonDTO.id, urlImage: pokemonDTO.sprites?.frontDefault)
+                let pokemonToAppend = Pokemon(id: String(pokemonDTO.id), name: pokemonDTO.name, description: "No description", number: pokemonDTO.id, urlImage: pokemonDTO.sprites?.frontDefault)
                 self?.pokemons.append(pokemonToAppend)
             }
             .store(in: &suscriptors)
-        
+    }
+    
+    func getPokemonsFirebase(){
+        useCase.loadPokemonsFromFirebase { PokemonListFirebaseResponse in
+            PokemonListFirebaseResponse.forEach { pokemonFirebaseResponse in
+                self.pokemons.append(pokemonFirebaseResponseToPokemon(pokemonFirebaseResponse))
+            }
+            
+        } onFailure: { Error in
+            print("Error ->", Error)
+        }
+
     }
     
 }

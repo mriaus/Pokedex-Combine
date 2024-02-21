@@ -23,3 +23,6 @@ enum endpoints: String {
     case pokemonDetail = "pokemon-form" //Detail ??
     case characteristics = "characteristic" // To get the description
 }
+
+//Firebase
+let FIREBASE_POKEMONS_COLLECTION_NAME = "pokemons"
