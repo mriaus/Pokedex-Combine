@@ -14,7 +14,7 @@ struct PokemonListView: View {
     var body: some View {
         ScrollView{
             LazyVGrid(columns: [GridItem(),GridItem()], content: {
-                ForEach(viewModel.pokemons.sorted(by: { $0.number! < $1.number! }), id: \.id) { pokemon in
+                ForEach(viewModel.pokemons, id: \.id) { pokemon in
                           PokemonListCellView(pokemon: pokemon)
                        }
             })
