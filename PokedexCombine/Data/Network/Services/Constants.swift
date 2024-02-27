@@ -26,3 +26,4 @@ enum endpoints: String {
 
 //Firebase
 let FIREBASE_POKEMONS_COLLECTION_NAME = "pokemons"
+let FIREBASE_FL_POKEMONS_COLLECTION_NAME = "fl_content"

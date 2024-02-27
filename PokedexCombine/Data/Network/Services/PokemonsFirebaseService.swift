@@ -20,7 +20,7 @@ struct PokemonsFirebaseService: PokemonsFirebaseServiceProtocol {
     private let db = Firestore.firestore()
     
     func getPokemonList(onSuccess: @escaping (PokemonListFirebaseResponse) -> Void, onFailure: @escaping (Error) -> Void) {
-        db.collection(FIREBASE_POKEMONS_COLLECTION_NAME)
+        db.collection(FIREBASE_FL_POKEMONS_COLLECTION_NAME)
             .order(by: "number", descending: false)
             .addSnapshotListener { (querySnapshot, error) in
                 if let error = error {
