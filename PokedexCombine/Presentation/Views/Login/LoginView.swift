@@ -52,8 +52,20 @@ struct LoginView: View {
 
                     Spacer()
                     Spacer()
+                    
                 }
+                .alert("Error de login", isPresented: Binding<Bool>(
+                    get: { !authViewModel.customError.isEmpty },
+                    set: { _ in }
+                ), actions: {
+                    Button("Cerrar"){
+                        authViewModel.customError = ""
+                    }
+                },message: {
+                    Text(authViewModel.customError)
+                })
                 .padding()
+                
             }
         }
     }

@@ -45,7 +45,7 @@ struct SignUpView: View {
                     
                     Spacer()
                     Button("Registrarse") {
-                        authViewModel.signUpWithEmail(email: username, password: password) { bool in
+                        authViewModel.signUpWithEmail(email: username, firstPassword: password, secondPassword: repeatedPassword) { bool in
                             isLogged = bool
                         }
                     }
@@ -56,6 +56,17 @@ struct SignUpView: View {
                     Spacer()
                     Spacer()
                 }
+                .alert("Error de creación de usuario", isPresented: Binding<Bool>(
+                    get: { !authViewModel.customError.isEmpty },
+                    set: { _ in }
+                ), actions: {
+                    Button("Cerrar"){
+                        authViewModel.customError = ""
+                    }
+                },message: {
+                    Text(authViewModel.customError)
+                })
+
                 .padding()
                 .navigationBarHidden(true)
             
