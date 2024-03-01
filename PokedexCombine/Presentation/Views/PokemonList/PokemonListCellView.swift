@@ -27,7 +27,6 @@ struct PokemonListCellView: View {
                     @unknown default:
                         Text("Error desconocido")
                     }
-                    
                 }
                 //The balack shadow
                 Color.black.opacity(0.35)

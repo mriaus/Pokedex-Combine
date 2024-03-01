@@ -32,14 +32,32 @@ struct PokedexCombineApp: App {
      @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
 
     let persistenceController = PersistenceController.shared
-
+    let authViewModel = AuthViewModel(useCase: UseCaseAuth())
+    @State private var isLogged: Bool = false
+    
+    
     var body: some Scene {
         WindowGroup {
-            NavigationView(content: {
-                PokemonListView()
-                    .environment(\.managedObjectContext, persistenceController.container.viewContext)
-            })
-            
-        }
+                if !isLogged {
+                    LoginView(isLogged: $isLogged)
+                }else {
+                    VStack{
+                        Text("Hola mundo")
+                        Button("Cerrar sesion") {
+                            authViewModel.logOut {
+                                    isLogged = false
+                            } onFailure: { error in
+                                print("ERROR LOG OUT \(error)")
+                                isLogged = false
+                            }
+
+                        }
+                    }
+                }
+                
+            }
+        .environment(\.managedObjectContext, persistenceController.container.viewContext)
+        .environmentObject(authViewModel)
+
     }
 }
