@@ -16,9 +16,10 @@ final class UseCaseAuth: UseCaseAuthProtocol {
     
  
     
-    func register() {
-        //
+    func registerWithEmail(email:String, password:String ,onSuccess: @escaping (User) -> Void, onFailure: @escaping (Error) -> Void){
+        return AuthService().registerWithEmail(email: email, password: password, onSucces: onSuccess, onFailure: onFailure)
     }
+
     
     func recoverPassword() {
         //

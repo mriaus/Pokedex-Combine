@@ -15,6 +15,7 @@ protocol AuthServiceProtocol {
 
 
 struct AuthService: AuthServiceProtocol {
+    
     func registerWithEmail(email: String, password: String, onSucces: @escaping (User) -> Void, onFailure: @escaping (Error) -> Void) {
         Auth.auth().createUser(withEmail: email, password: password) { result, error in
             if let error = error {
@@ -46,7 +47,7 @@ struct AuthService: AuthServiceProtocol {
     }
     
     func isUserLogged(onSucces: @escaping(Bool) -> Void, onFailure: @escaping (Error) -> Void){
-        if let user = Auth.auth().currentUser {
+        if let _ = Auth.auth().currentUser {
             onSucces(true)
         }else{
             onSucces(false)

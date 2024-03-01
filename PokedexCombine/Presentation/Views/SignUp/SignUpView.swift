@@ -1,24 +1,25 @@
 //
-//  LoginView.swift
+//  SignUp.swift
 //  PokedexCombine
 //
-//  Created by Marcos on 27/2/24.
+//  Created by Marcos on 1/3/24.
 //
 
 import SwiftUI
-
-struct LoginView: View {
+struct SignUpView: View {
     
-    @Binding var isLogged: Bool
     @EnvironmentObject var authViewModel: AuthViewModel
+    @Environment(\.presentationMode) var presentationMode
+    @Binding var isLogged: Bool
+
     
     @State private var username: String = ""
     @State private var password: String = ""
+    @State private var repeatedPassword: String = ""
     
 
     
     var body: some View {
-        NavigationView {
             ZStack {
                 Image("loginBG")
                     .resizable()
@@ -28,7 +29,7 @@ struct LoginView: View {
                 VStack(spacing: 30) {
                     Spacer()
                     TextField("Username", text: $username)
-                        .textInputAutocapitalization(.none)
+                        .textInputAutocapitalization(.never)
                         .autocorrectionDisabled()
                         .padding(.horizontal, 30)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -38,28 +39,27 @@ struct LoginView: View {
                         .padding(.horizontal, 30)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                     
+                    SecureField("Repeat Password", text: $repeatedPassword)
+                        .padding(.horizontal, 30)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                    
                     Spacer()
-                    Button("Login") {
-                        authViewModel.loginWithEmail(email: username, password: password) { logged in
-                            isLogged = logged
+                    Button("Registrarse") {
+                        authViewModel.signUpWithEmail(email: username, password: password) { bool in
+                            isLogged = bool
                         }
                     }
-                    NavigationLink {
-                        SignUpView(isLogged: $isLogged)
-                    } label: {
-                        Text("¿No tienes cuenta?")
+                    Button("Ya tengo cuenta") {
+                        presentationMode.wrappedValue.dismiss()
                     }
-
+                    
                     Spacer()
                     Spacer()
                 }
                 .padding()
-            }
+                .navigationBarHidden(true)
+            
         }
     }
     
-}
-
-#Preview {
-    LoginView(isLogged: .constant(true))
 }

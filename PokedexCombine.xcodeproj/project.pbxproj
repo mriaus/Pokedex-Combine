@@ -38,6 +38,7 @@
 		8DC9FC522B8FCD4E0051EE33 /* UseCaseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC9FC512B8FCD4E0051EE33 /* UseCaseAuth.swift */; };
 		8DC9FC542B8FEBEC0051EE33 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC9FC532B8FEBEC0051EE33 /* User.swift */; };
 		8DC9FC562B8FF11F0051EE33 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC9FC552B8FF11F0051EE33 /* AuthService.swift */; };
+		8DD876C12B923FD000786D6A /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD876C02B923FD000786D6A /* SignUpView.swift */; };
 		8DF23C7A2B8E61AF00FA7840 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF23C792B8E61AF00FA7840 /* LoginView.swift */; };
 		8DF23C7C2B8E637400FA7840 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF23C7B2B8E637400FA7840 /* AuthViewModel.swift */; };
 		8DFB25CD2B14AC79005E125B /* PokemonsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFB25CC2B14AC79005E125B /* PokemonsService.swift */; };
@@ -92,6 +93,7 @@
 		8DC9FC512B8FCD4E0051EE33 /* UseCaseAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseAuth.swift; sourceTree = "<group>"; };
 		8DC9FC532B8FEBEC0051EE33 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8DC9FC552B8FF11F0051EE33 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		8DD876C02B923FD000786D6A /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		8DF23C792B8E61AF00FA7840 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		8DF23C7B2B8E637400FA7840 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		8DFB25CC2B14AC79005E125B /* PokemonsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonsService.swift; sourceTree = "<group>"; };
@@ -221,6 +223,14 @@
 			path = Presentation;
 			sourceTree = "<group>";
 		};
+		8DD876BF2B923FBB00786D6A /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				8DD876C02B923FD000786D6A /* SignUpView.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
 		8DF23C782B8E5FC000FA7840 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -305,6 +315,7 @@
 		8DFB25C82B0FE5F5005E125B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8DD876BF2B923FBB00786D6A /* SignUp */,
 				8DF23C782B8E5FC000FA7840 /* Login */,
 				8DFB25DC2B151319005E125B /* PokemonList */,
 			);
@@ -522,6 +533,7 @@
 				8DFB25CF2B14ACEB005E125B /* Constants.swift in Sources */,
 				8DC9FC522B8FCD4E0051EE33 /* UseCaseAuth.swift in Sources */,
 				8DC9FC542B8FEBEC0051EE33 /* User.swift in Sources */,
+				8DD876C12B923FD000786D6A /* SignUpView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

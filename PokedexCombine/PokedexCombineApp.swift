@@ -39,20 +39,12 @@ struct PokedexCombineApp: App {
     var body: some Scene {
         WindowGroup {
                 if !isLogged {
-                    LoginView(isLogged: $isLogged)
-                }else {
-                    VStack{
-                        Text("Hola mundo")
-                        Button("Cerrar sesion") {
-                            authViewModel.logOut {
-                                    isLogged = false
-                            } onFailure: { error in
-                                print("ERROR LOG OUT \(error)")
-                                isLogged = false
-                            }
-
-                        }
+                    NavigationView {
+                        LoginView(isLogged: $isLogged)
                     }
+                    
+                }else {
+                   PokemonListView(isLogged: $isLogged)
                 }
                 
             }

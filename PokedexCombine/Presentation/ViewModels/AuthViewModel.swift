@@ -23,7 +23,6 @@ final class AuthViewModel: ObservableObject {
     
     func loginWithEmail(email: String, password: String, completion: @escaping (Bool) -> Void) {
         useCase.loginWithEmail(email: email, password: password) { isLogged in
-            print(isLogged)
             completion(true)
         } onFailure: { error in
             print("ERROR: \(error)")
@@ -36,6 +35,16 @@ final class AuthViewModel: ObservableObject {
             onSucces()
         } onFailure: { error in
             onFailure(error)
+        }
+    }
+    
+    func signUpWithEmail(email: String, password: String, completion: @escaping (Bool) -> Void){
+        useCase.registerWithEmail(email: email, password: password) { user in
+            print(user)
+            completion(true)
+        } onFailure: { error in
+            print("ERROR: \(error)")
+            completion(false)
         }
 
     }
