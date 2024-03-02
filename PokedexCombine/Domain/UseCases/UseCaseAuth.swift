@@ -9,6 +9,18 @@ import Foundation
 import FirebaseAuth
 
 final class UseCaseAuth: UseCaseAuthProtocol {
+    func loginWithEmailmock(email: String, password: String, onSuccess: @escaping (User) -> Void, onFailure: @escaping (Error) -> Void) {
+        //TODO
+    }
+    
+    func logOutMock(onSucces: @escaping () -> Void, onFailure: @escaping (Error) -> Void) {
+        //TODO
+    }
+    
+    func registerWithEmailMock(email: String, password: String, onSuccess: @escaping (User) -> Void, onFailure: @escaping (Error) -> Void) {
+        //TODO
+    }
+    
 
     func loginWithEmail(email: String, password: String, onSuccess: @escaping (User) -> Void, onFailure: @escaping (Error) -> Void) {
         return AuthService().login(email: email, password: password, onSucces: onSuccess, onFailure: onFailure)

@@ -39,6 +39,9 @@
 		8DC9FC542B8FEBEC0051EE33 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC9FC532B8FEBEC0051EE33 /* User.swift */; };
 		8DC9FC562B8FF11F0051EE33 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC9FC552B8FF11F0051EE33 /* AuthService.swift */; };
 		8DD876C12B923FD000786D6A /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD876C02B923FD000786D6A /* SignUpView.swift */; };
+		8DDCB02E2B9337FB00B7BFDE /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DDCB02D2B9337FB00B7BFDE /* Launch Screen.storyboard */; };
+		8DDCB0312B93389200B7BFDE /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 8DDCB0302B93389200B7BFDE /* Lottie */; };
+		8DDCB0382B933F6F00B7BFDE /* PokeballAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 8DDCB0372B933F6F00B7BFDE /* PokeballAnimation.json */; };
 		8DF23C7A2B8E61AF00FA7840 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF23C792B8E61AF00FA7840 /* LoginView.swift */; };
 		8DF23C7C2B8E637400FA7840 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF23C7B2B8E637400FA7840 /* AuthViewModel.swift */; };
 		8DFB25CD2B14AC79005E125B /* PokemonsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFB25CC2B14AC79005E125B /* PokemonsService.swift */; };
@@ -94,6 +97,8 @@
 		8DC9FC532B8FEBEC0051EE33 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8DC9FC552B8FF11F0051EE33 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		8DD876C02B923FD000786D6A /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		8DDCB02D2B9337FB00B7BFDE /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		8DDCB0372B933F6F00B7BFDE /* PokeballAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PokeballAnimation.json; sourceTree = "<group>"; };
 		8DF23C792B8E61AF00FA7840 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		8DF23C7B2B8E637400FA7840 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		8DFB25CC2B14AC79005E125B /* PokemonsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonsService.swift; sourceTree = "<group>"; };
@@ -112,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DDCB0312B93389200B7BFDE /* Lottie in Frameworks */,
 				8D9ACC3B2B84AEA500EB546E /* FirebaseInAppMessagingSwift-Beta in Frameworks */,
 				8D9ACC352B84AEA500EB546E /* FirebaseDatabaseSwift in Frameworks */,
 				8D9ACC2D2B84AEA500EB546E /* FirebaseAppCheck in Frameworks */,
@@ -175,6 +181,7 @@
 		8D0CC0442B0BCADD0009E488 /* PokedexCombine */ = {
 			isa = PBXGroup;
 			children = (
+				8DDCB0342B933EDA00B7BFDE /* Resources */,
 				8DFB25C12B0FDE89005E125B /* Domain */,
 				8DFB25C02B0FDE3F005E125B /* Data */,
 				8D0CC0752B0BCC330009E488 /* Presentation */,
@@ -229,6 +236,22 @@
 				8DD876C02B923FD000786D6A /* SignUpView.swift */,
 			);
 			path = SignUp;
+			sourceTree = "<group>";
+		};
+		8DDCB02C2B9337D500B7BFDE /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8DDCB02D2B9337FB00B7BFDE /* Launch Screen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		8DDCB0342B933EDA00B7BFDE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8DDCB0372B933F6F00B7BFDE /* PokeballAnimation.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		8DF23C782B8E5FC000FA7840 /* Login */ = {
@@ -315,6 +338,7 @@
 		8DFB25C82B0FE5F5005E125B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8DDCB02C2B9337D500B7BFDE /* LaunchScreen */,
 				8DD876BF2B923FBB00786D6A /* SignUp */,
 				8DF23C782B8E5FC000FA7840 /* Login */,
 				8DFB25DC2B151319005E125B /* PokemonList */,
@@ -390,6 +414,7 @@
 				8D9ACC382B84AEA500EB546E /* FirebaseFirestoreSwift */,
 				8D9ACC3A2B84AEA500EB546E /* FirebaseInAppMessagingSwift-Beta */,
 				8D9ACC3C2B84AEA500EB546E /* FirebaseStorageCombine-Community */,
+				8DDCB0302B93389200B7BFDE /* Lottie */,
 			);
 			productName = PokedexCombine;
 			productReference = 8D0CC0422B0BCADD0009E488 /* PokedexCombine.app */;
@@ -465,6 +490,7 @@
 			mainGroup = 8D0CC0392B0BCADD0009E488;
 			packageReferences = (
 				8D9ACC252B84AEA500EB546E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				8DDCB02F2B93389200B7BFDE /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = 8D0CC0432B0BCADD0009E488 /* Products */;
 			projectDirPath = "";
@@ -483,7 +509,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D0CC0532B0BCADF0009E488 /* Preview Assets.xcassets in Resources */,
+				8DDCB0382B933F6F00B7BFDE /* PokeballAnimation.json in Resources */,
 				8D0CC04F2B0BCADF0009E488 /* Assets.xcassets in Resources */,
+				8DDCB02E2B9337FB00B7BFDE /* Launch Screen.storyboard in Resources */,
 				8D9ACC242B84AE2200EB546E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -689,6 +717,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = PokedexCombine/PokedexCombine.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -703,6 +732,7 @@
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -727,6 +757,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = PokedexCombine/PokedexCombine.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -741,6 +772,7 @@
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -900,6 +932,14 @@
 				minimumVersion = 10.21.0;
 			};
 		};
+		8DDCB02F2B93389200B7BFDE /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.4.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -962,6 +1002,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8D9ACC252B84AEA500EB546E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseStorageCombine-Community";
+		};
+		8DDCB0302B93389200B7BFDE /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8DDCB02F2B93389200B7BFDE /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
 
