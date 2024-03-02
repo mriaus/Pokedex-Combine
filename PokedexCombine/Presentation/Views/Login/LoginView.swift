@@ -9,7 +9,6 @@ import SwiftUI
 
 struct LoginView: View {
     
-    @Binding var isLogged: Bool
     @EnvironmentObject var authViewModel: AuthViewModel
     
     @State private var username: String = ""
@@ -28,10 +27,11 @@ struct LoginView: View {
                 VStack(spacing: 30) {
                     Spacer()
                     TextField("Username", text: $username)
-                        .textInputAutocapitalization(.none)
                         .autocorrectionDisabled()
                         .padding(.horizontal, 30)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .textInputAutocapitalization(.never)
+
                         
 
                     SecureField("Password", text: $password)
@@ -40,12 +40,10 @@ struct LoginView: View {
                     
                     Spacer()
                     Button("Login") {
-                        authViewModel.loginWithEmail(email: username, password: password) { logged in
-                            isLogged = logged
-                        }
+                        authViewModel.loginWithEmail(email: username, password: password)
                     }
                     NavigationLink {
-                        SignUpView(isLogged: $isLogged)
+                        SignUpView()
                     } label: {
                         Text("¿No tienes cuenta?")
                     }
@@ -73,5 +71,5 @@ struct LoginView: View {
 }
 
 #Preview {
-    LoginView(isLogged: .constant(true))
+    LoginView()
 }

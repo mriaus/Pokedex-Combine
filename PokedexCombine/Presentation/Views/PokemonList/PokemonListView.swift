@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct PokemonListView: View {
-    @Binding var isLogged: Bool
     @EnvironmentObject var authViewModel: AuthViewModel
 
     @ObservedObject var viewModel = PokemonListViewModel(useCase: UseCasePokemonList())
@@ -16,25 +15,17 @@ struct PokemonListView: View {
     var body: some View {
         ScrollView{
             Button("Cerrar sesion") {
-                authViewModel.logOut {
-                        isLogged = false
-                } onFailure: { error in
-                    print("ERROR LOG OUT \(error)")
-                    isLogged = false
-                }
+                authViewModel.logOut()
             }
             LazyVGrid(columns: [GridItem(),GridItem()], content: {
                 ForEach(viewModel.pokemons, id: \.id) { pokemon in
                           PokemonListCellView(pokemon: pokemon)
                        }
             })
-            
-           
         }
-       
     }
 }
 
 #Preview {
-    PokemonListView(isLogged: .constant(true))
+    PokemonListView()
 }

@@ -52,37 +52,38 @@ final class AuthViewModel: ObservableObject {
         }
     }
     
-    func loginWithEmail(email: String, password: String, completion: @escaping (Bool) -> Void) {
+    func loginWithEmail(email: String, password: String) {
         if(checkEmail(email: email) && checkPassword(password: password)){
             useCase.loginWithEmail(email: email, password: password) { isLogged in
-                completion(true)
+                self.didAuthenticateUser = true
             } onFailure: { error in
                 print("ERROR: \(error)")
                 self.customError = "Usuario o contraseña incorrector"
-                completion(false)
+                self.didAuthenticateUser = false
             }
         }
         
     }
     
-    func logOut(onSucces: @escaping () -> Void, onFailure: @escaping (Error) -> Void) {
+    func logOut() {
         useCase.logOut {
-            onSucces()
+            self.didAuthenticateUser = false
         } onFailure: { error in
-            onFailure(error)
+            // TODO: Add some logs to firebase
+            self.didAuthenticateUser = false
+
         }
     }
     
-    func signUpWithEmail(email: String, firstPassword: String, secondPassword: String, completion: @escaping (Bool) -> Void){
+    func signUpWithEmail(email: String, firstPassword: String, secondPassword: String){
         if(checkEmail(email: email) && checkPassword(password: firstPassword)){
             if(checkPasswordsAreEqual(firstPassword: firstPassword, secondPassword: secondPassword)){
                 useCase.registerWithEmail(email: email, password: firstPassword) { user in
                     print(user)
-                    completion(true)
+                    self.didAuthenticateUser = true
                 } onFailure: { error in
                     print("ERROR: \(error)")
                     self.customError = "Error al crear el usuario"
-                    completion(false)
                 }
             }
             

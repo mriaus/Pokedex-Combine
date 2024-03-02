@@ -32,21 +32,19 @@ struct PokedexCombineApp: App {
      @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
 
     let persistenceController = PersistenceController.shared
-    let authViewModel = AuthViewModel(useCase: UseCaseAuth())
-    @State private var isLogged: Bool = false
+    @ObservedObject var authViewModel = AuthViewModel(useCase: UseCaseAuth())
     
     
     var body: some Scene {
         WindowGroup {
-                if !isLogged {
+            if !authViewModel.didAuthenticateUser {
                     NavigationView {
-                        LoginView(isLogged: $isLogged)
+                        LoginView()
                     }
                     
                 }else {
-                   PokemonListView(isLogged: $isLogged)
+                   PokemonListView()
                 }
-                
             }
         .environment(\.managedObjectContext, persistenceController.container.viewContext)
         .environmentObject(authViewModel)

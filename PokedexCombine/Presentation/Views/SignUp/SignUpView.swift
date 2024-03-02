@@ -10,7 +10,6 @@ struct SignUpView: View {
     
     @EnvironmentObject var authViewModel: AuthViewModel
     @Environment(\.presentationMode) var presentationMode
-    @Binding var isLogged: Bool
 
     
     @State private var username: String = ""
@@ -45,9 +44,7 @@ struct SignUpView: View {
                     
                     Spacer()
                     Button("Registrarse") {
-                        authViewModel.signUpWithEmail(email: username, firstPassword: password, secondPassword: repeatedPassword) { bool in
-                            isLogged = bool
-                        }
+                        authViewModel.signUpWithEmail(email: username, firstPassword: password, secondPassword: repeatedPassword)
                     }
                     Button("Ya tengo cuenta") {
                         presentationMode.wrappedValue.dismiss()
