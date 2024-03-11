@@ -10,7 +10,7 @@ import SwiftUI
 struct PokemonListView: View {
     @EnvironmentObject var authViewModel: AuthViewModel
 
-    @ObservedObject var viewModel = PokemonListViewModel(useCase: UseCasePokemonList())
+    @State var viewModel: PokemonListViewModelProtocol
     
     var body: some View {
         ScrollView{
@@ -27,5 +27,5 @@ struct PokemonListView: View {
 }
 
 #Preview {
-    PokemonListView()
+    PokemonListView(viewModel: PokemonListMockViewModel(useCase: UseCasePokemonList()))
 }

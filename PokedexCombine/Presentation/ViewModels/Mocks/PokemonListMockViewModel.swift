@@ -1,23 +1,13 @@
 //
-//  PokemonListViewModel.swift
+//  PokemonListMockViewModel.swift
 //  PokedexCombine
 //
-//  Created by Marcos on 27/11/23.
+//  Created by Marcos on 7/3/24.
 //
 
 import Foundation
 import Combine
-
-protocol PokemonListViewModelProtocol {
-    func getPokemons()
-    func getPokemonByName(pokemonName: String)
-    func getPokemonsFirebase()
-    var pokemons: [Pokemon] { get set }
-}
-
-final class PokemonListViewModel: ObservableObject, PokemonListViewModelProtocol{
-
-    
+final class PokemonListMockViewModel: ObservableObject, PokemonListViewModelProtocol {
     
     let useCase: UseCasePokemonListProtocol
     
@@ -63,15 +53,8 @@ final class PokemonListViewModel: ObservableObject, PokemonListViewModelProtocol
     }
     
     func getPokemonsFirebase(){
-        useCase.loadPokemonsFromFirebase { PokemonListFirebaseResponse in
-            PokemonListFirebaseResponse.forEach { pokemonFirebaseResponse in
-                self.pokemons.append(pokemonFirebaseResponseToPokemon(pokemonFirebaseResponse))
-            }
-            
-        } onFailure: { Error in
-            print("Error ->", Error)
-        }
-
+        self.pokemons = [Pokemon(id: "1", name: "Venusaur", description: "", number: 0001, urlImage:                "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png"),
+                         Pokemon(id: "2", name: "Venusaur", description: "", number: 0001, urlImage: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png")]
     }
     
 }

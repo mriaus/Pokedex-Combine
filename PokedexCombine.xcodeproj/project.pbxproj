@@ -34,6 +34,15 @@
 		8D9ACC392B84AEA500EB546E /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8D9ACC382B84AEA500EB546E /* FirebaseFirestoreSwift */; };
 		8D9ACC3B2B84AEA500EB546E /* FirebaseInAppMessagingSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 8D9ACC3A2B84AEA500EB546E /* FirebaseInAppMessagingSwift-Beta */; };
 		8D9ACC3D2B84AEA500EB546E /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 8D9ACC3C2B84AEA500EB546E /* FirebaseStorageCombine-Community */; };
+		8DB8B4162B99F6C800883B28 /* TeamListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB8B4152B99F6C800883B28 /* TeamListViewModel.swift */; };
+		8DB8B4182B99F73C00883B28 /* UseCaseTeamsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB8B4172B99F73C00883B28 /* UseCaseTeamsList.swift */; };
+		8DB8B41A2B99F76100883B28 /* UseCaseTeamsListProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB8B4192B99F76100883B28 /* UseCaseTeamsListProtocol.swift */; };
+		8DB8B41C2B99FBB400883B28 /* TeamsFirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB8B41B2B99FBB400883B28 /* TeamsFirebaseService.swift */; };
+		8DB8B41E2B99FCA000883B28 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB8B41D2B99FCA000883B28 /* Team.swift */; };
+		8DB8B4212B9A06D100883B28 /* PokemonListMockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB8B4202B9A06D100883B28 /* PokemonListMockViewModel.swift */; };
+		8DB8B4232B9A0DBC00883B28 /* TeamsListMockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB8B4222B9A0DBC00883B28 /* TeamsListMockViewModel.swift */; };
+		8DB9C51B2B937612004652D9 /* TeamsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB9C51A2B937612004652D9 /* TeamsListView.swift */; };
+		8DB9C51D2B937752004652D9 /* TeamListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB9C51C2B937752004652D9 /* TeamListCellView.swift */; };
 		8DC9FC4E2B8FC4CF0051EE33 /* Extension+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC9FC4D2B8FC4CF0051EE33 /* Extension+Color.swift */; };
 		8DC9FC502B8FCC5E0051EE33 /* UseCaseAuthProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC9FC4F2B8FCC5E0051EE33 /* UseCaseAuthProtocol.swift */; };
 		8DC9FC522B8FCD4E0051EE33 /* UseCaseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC9FC512B8FCD4E0051EE33 /* UseCaseAuth.swift */; };
@@ -93,6 +102,15 @@
 		8D0CC0682B0BCADF0009E488 /* PokedexCombineUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexCombineUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8D75D63C2B93469700D51034 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		8D9ACC232B84AE2200EB546E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8DB8B4152B99F6C800883B28 /* TeamListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamListViewModel.swift; sourceTree = "<group>"; };
+		8DB8B4172B99F73C00883B28 /* UseCaseTeamsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseTeamsList.swift; sourceTree = "<group>"; };
+		8DB8B4192B99F76100883B28 /* UseCaseTeamsListProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseTeamsListProtocol.swift; sourceTree = "<group>"; };
+		8DB8B41B2B99FBB400883B28 /* TeamsFirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsFirebaseService.swift; sourceTree = "<group>"; };
+		8DB8B41D2B99FCA000883B28 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		8DB8B4202B9A06D100883B28 /* PokemonListMockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonListMockViewModel.swift; sourceTree = "<group>"; };
+		8DB8B4222B9A0DBC00883B28 /* TeamsListMockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsListMockViewModel.swift; sourceTree = "<group>"; };
+		8DB9C51A2B937612004652D9 /* TeamsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsListView.swift; sourceTree = "<group>"; };
+		8DB9C51C2B937752004652D9 /* TeamListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamListCellView.swift; sourceTree = "<group>"; };
 		8DC9FC4D2B8FC4CF0051EE33 /* Extension+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Extension+Color.swift"; path = "PokedexCombine/Presentation/ViewModels/Extension+Color.swift"; sourceTree = SOURCE_ROOT; };
 		8DC9FC4F2B8FCC5E0051EE33 /* UseCaseAuthProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseAuthProtocol.swift; sourceTree = "<group>"; };
 		8DC9FC512B8FCD4E0051EE33 /* UseCaseAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseAuth.swift; sourceTree = "<group>"; };
@@ -240,6 +258,24 @@
 			path = MainScreen;
 			sourceTree = "<group>";
 		};
+		8D75D63E2B93529D00D51034 /* TeamsList */ = {
+			isa = PBXGroup;
+			children = (
+				8DB9C51A2B937612004652D9 /* TeamsListView.swift */,
+				8DB9C51C2B937752004652D9 /* TeamListCellView.swift */,
+			);
+			path = TeamsList;
+			sourceTree = "<group>";
+		};
+		8DB8B41F2B9A068600883B28 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				8DB8B4202B9A06D100883B28 /* PokemonListMockViewModel.swift */,
+				8DB8B4222B9A0DBC00883B28 /* TeamsListMockViewModel.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		8DD876BF2B923FBB00786D6A /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
@@ -323,6 +359,7 @@
 			children = (
 				8DFB25D42B14B788005E125B /* Pokemon.swift */,
 				8DC9FC532B8FEBEC0051EE33 /* User.swift */,
+				8DB8B41D2B99FCA000883B28 /* Team.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -332,6 +369,7 @@
 			children = (
 				8DFB25D82B150EAC005E125B /* UseCasePokemonListProtocol.swift */,
 				8DC9FC4F2B8FCC5E0051EE33 /* UseCaseAuthProtocol.swift */,
+				8DB8B4192B99F76100883B28 /* UseCaseTeamsListProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -341,6 +379,7 @@
 			children = (
 				8DFB25D62B150D74005E125B /* UseCasePokemonList.swift */,
 				8DC9FC512B8FCD4E0051EE33 /* UseCaseAuth.swift */,
+				8DB8B4172B99F73C00883B28 /* UseCaseTeamsList.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -348,6 +387,7 @@
 		8DFB25C82B0FE5F5005E125B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8D75D63E2B93529D00D51034 /* TeamsList */,
 				8D75D63B2B93466000D51034 /* MainScreen */,
 				8DDCB02C2B9337D500B7BFDE /* LaunchScreen */,
 				8DD876BF2B923FBB00786D6A /* SignUp */,
@@ -360,8 +400,10 @@
 		8DFB25C92B0FE5FD005E125B /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				8DB8B41F2B9A068600883B28 /* Mocks */,
 				8DFB25DE2B1514C0005E125B /* PokemonListViewModel.swift */,
 				8DF23C7B2B8E637400FA7840 /* AuthViewModel.swift */,
+				8DB8B4152B99F6C800883B28 /* TeamListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -383,6 +425,7 @@
 				8DFB25CE2B14ACEB005E125B /* Constants.swift */,
 				8D0387E52B851E8200EA1F05 /* PokemonsFirebaseService.swift */,
 				8DC9FC552B8FF11F0051EE33 /* AuthService.swift */,
+				8DB8B41B2B99FBB400883B28 /* TeamsFirebaseService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -549,6 +592,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D0387E42B851E0100EA1F05 /* Extension+URLResponse.swift in Sources */,
+				8DB8B41C2B99FBB400883B28 /* TeamsFirebaseService.swift in Sources */,
 				8D75D63D2B93469700D51034 /* MainView.swift in Sources */,
 				8DFB25D72B150D74005E125B /* UseCasePokemonList.swift in Sources */,
 				8D0CC0462B0BCADD0009E488 /* PokedexCombineApp.swift in Sources */,
@@ -559,19 +603,27 @@
 				8DC9FC4E2B8FC4CF0051EE33 /* Extension+Color.swift in Sources */,
 				8DFB25D92B150EAC005E125B /* UseCasePokemonListProtocol.swift in Sources */,
 				8DFB25DF2B1514C0005E125B /* PokemonListViewModel.swift in Sources */,
+				8DB9C51B2B937612004652D9 /* TeamsListView.swift in Sources */,
 				8D0CC04B2B0BCADD0009E488 /* PokedexCombine.xcdatamodeld in Sources */,
 				8DC9FC502B8FCC5E0051EE33 /* UseCaseAuthProtocol.swift in Sources */,
 				8D0387E22B851BD200EA1F05 /* PokemonListFirebaseResponse.swift in Sources */,
 				8D0CC0482B0BCADD0009E488 /* Persistence.swift in Sources */,
+				8DB8B41A2B99F76100883B28 /* UseCaseTeamsListProtocol.swift in Sources */,
+				8DB8B4162B99F6C800883B28 /* TeamListViewModel.swift in Sources */,
 				8DF23C7A2B8E61AF00FA7840 /* LoginView.swift in Sources */,
 				8DC9FC562B8FF11F0051EE33 /* AuthService.swift in Sources */,
 				8DFB25D52B14B788005E125B /* Pokemon.swift in Sources */,
+				8DB8B4232B9A0DBC00883B28 /* TeamsListMockViewModel.swift in Sources */,
 				8DFB25D12B14B38F005E125B /* PokemonListResponse.swift in Sources */,
 				8D0B81E92B1E6934005E669D /* PokemonTypes.swift in Sources */,
+				8DB8B4182B99F73C00883B28 /* UseCaseTeamsList.swift in Sources */,
 				8DFB25CD2B14AC79005E125B /* PokemonsService.swift in Sources */,
+				8DB8B4212B9A06D100883B28 /* PokemonListMockViewModel.swift in Sources */,
 				8DF23C7C2B8E637400FA7840 /* AuthViewModel.swift in Sources */,
+				8DB9C51D2B937752004652D9 /* TeamListCellView.swift in Sources */,
 				8DFB25CF2B14ACEB005E125B /* Constants.swift in Sources */,
 				8DC9FC522B8FCD4E0051EE33 /* UseCaseAuth.swift in Sources */,
+				8DB8B41E2B99FCA000883B28 /* Team.swift in Sources */,
 				8DC9FC542B8FEBEC0051EE33 /* User.swift in Sources */,
 				8DD876C12B923FD000786D6A /* SignUpView.swift in Sources */,
 			);

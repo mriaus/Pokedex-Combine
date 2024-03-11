@@ -43,7 +43,8 @@ struct PokedexCombineApp: App {
                     }
                     
                 }else {
-                   PokemonListView()
+                    //Pasar todos los viewModels por aquí 
+                   MainView()
                 }
             }
         .environment(\.managedObjectContext, persistenceController.container.viewContext)
